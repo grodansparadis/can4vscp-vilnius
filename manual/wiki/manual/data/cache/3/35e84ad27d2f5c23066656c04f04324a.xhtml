@@ -1,0 +1,296 @@
+
+<h1 class="sectionedit1" id="abstractions">Abstractions</h1>
+<div class="level1">
+
+<p>
+A VSCP unit is  describing it&#039;s configuration to the world with a register model where each register is eight bit in width. This is often inconvenient for a human user who is used to higher level types and this is what <em>abstractions</em> are there for. They sit above registers and specify types as strings, floats, integers and other such higher level types.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Abstractions&quot;,&quot;hid&quot;:&quot;abstractions&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-387&quot;} -->
+<h2 class="sectionedit2" id="a_d_value">A/D value</h2>
+<div class="level2">
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_value  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> A/D value for channel 0 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_value  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> A/D value for channel 1 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_value  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> A/D value for channel 2 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_value  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> A/D value for channel 3 </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table&quot;,&quot;secid&quot;:3,&quot;range&quot;:&quot;411-664&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\/D value&quot;,&quot;hid&quot;:&quot;a_d_value&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;388-665&quot;} -->
+<h2 class="sectionedit4" id="measurement_value">Measurement value</h2>
+<div class="level2">
+<div class="table sectionedit5"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_measurement_value  </td><td class="col1 centeralign">  float  </td><td class="col2"> Measurement value for channel 0 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_measurement_value  </td><td class="col1 centeralign">  float  </td><td class="col2"> Measurement value for channel 1 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_measurement_value  </td><td class="col1 centeralign">  float  </td><td class="col2"> Measurement value for channel 2 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_measurement_value  </td><td class="col1 centeralign">  float  </td><td class="col2"> Measurement value for channel 3 </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table1&quot;,&quot;secid&quot;:5,&quot;range&quot;:&quot;697-1018&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Measurement value&quot;,&quot;hid&quot;:&quot;measurement_value&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;666-1018&quot;} -->
+<h2 class="sectionedit6" id="a_d_report_interval">A/D report interval</h2>
+<div class="level2">
+<div class="table sectionedit7"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Report interval in milliseconds for channel 0. Set to zero to disable. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Report interval in milliseconds for channel 1. Set to zero to disable. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Report interval in milliseconds for channel 2. Set to zero to disable. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Report interval in milliseconds for channel 3. Set to zero to disable. </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table2&quot;,&quot;secid&quot;:7,&quot;range&quot;:&quot;1052-1533&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\/D report interval&quot;,&quot;hid&quot;:&quot;a_d_report_interval&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:6,&quot;range&quot;:&quot;1019-1534&quot;} -->
+<h2 class="sectionedit8" id="a_d_low_alarm">A/D low alarm</h2>
+<div class="level2">
+
+<p>
+Low alarms will use index 0,1,2,3 to identify the origin of the alarm. See <a href="/vilnius/manual/doku.php?id=events" class="wikilink1" title="events">Events</a> for more information.
+</p>
+<div class="table sectionedit9"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_low_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Low alarm set point for channel 0. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_low_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Low alarm set point for channel 1. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_low_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Low alarm set point for channel 2. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_low_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Low alarm set point for channel 3. </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table3&quot;,&quot;secid&quot;:9,&quot;range&quot;:&quot;1678-1991&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\/D low alarm&quot;,&quot;hid&quot;:&quot;a_d_low_alarm&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:8,&quot;range&quot;:&quot;1535-1992&quot;} -->
+<h2 class="sectionedit10" id="a_d_high_alarm">A/D high alarm</h2>
+<div class="level2">
+
+<p>
+High alarms will use index 0x80,0x81,0x82,0x83 (bit 7 set of the index byte) to identify the origin of the alarm. See <a href="/vilnius/manual/doku.php?id=events" class="wikilink1" title="events">Events</a> for more information.
+</p>
+<div class="table sectionedit11"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch1_high_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> High alarm set point for channel 0. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch2_high_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> High alarm set point for channel 1. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch3_high_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> High alarm set point for channel 2. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch4_high_alarm  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> High alarm set point for channel 3. </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table4&quot;,&quot;secid&quot;:11,&quot;range&quot;:&quot;2180-2501&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\/D high alarm&quot;,&quot;hid&quot;:&quot;a_d_high_alarm&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:10,&quot;range&quot;:&quot;1993-2502&quot;} -->
+<h2 class="sectionedit12" id="measurement_report_interval">Measurement report interval</h2>
+<div class="level2">
+<div class="table sectionedit13"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_measurement_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Measurement report interval for channel 0. Set to zero to disable. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_measurement_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Measurement report interval for channel 1. Set to zero to disable. </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_measurement_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Measurement report interval for channel 2. Set to zero to disable. </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_measurement_report_interval  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Measurement report interval for channel 3. Set to zero to disable. </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table5&quot;,&quot;secid&quot;:13,&quot;range&quot;:&quot;2544-3057&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Measurement report interval&quot;,&quot;hid&quot;:&quot;measurement_report_interval&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:12,&quot;range&quot;:&quot;2503-3058&quot;} -->
+<h2 class="sectionedit14" id="a_d_absolute_low_value">A/D absolute low value</h2>
+<div class="level2">
+<div class="table sectionedit15"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_low  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute low value for channel 0 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_low  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute low value for channel 1 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_low  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute low value for channel 2 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_low  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute low value for channel 3 </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table6&quot;,&quot;secid&quot;:15,&quot;range&quot;:&quot;3095-3376&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\/D absolute low value&quot;,&quot;hid&quot;:&quot;a_d_absolute_low_value&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:14,&quot;range&quot;:&quot;3059-3378&quot;} -->
+<h2 class="sectionedit16" id="a_d_absolute_high_value">A/D absolute high value</h2>
+<div class="level2">
+<div class="table sectionedit17"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_high  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute high value for channel 0 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_high  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute high value for channel 1 </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_high  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute high value for channel 2 </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_high  </td><td class="col1 centeralign">  uint16_t  </td><td class="col2"> Absolute high value for channel 3 </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table7&quot;,&quot;secid&quot;:17,&quot;range&quot;:&quot;3416-3705&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;A\/D absolute high value&quot;,&quot;hid&quot;:&quot;a_d_absolute_high_value&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:16,&quot;range&quot;:&quot;3379-3706&quot;} -->
+<h2 class="sectionedit18" id="k_constants_for_linearization">k constants for linearization</h2>
+<div class="level2">
+
+<p>
+Linearization is available so a measurement y can be calculated from 
+</p>
+<pre class="code">y = k*x + m</pre>
+
+<p>
+where x is either the current counter value for a channel or the current frequency for a channel.
+</p>
+<div class="table sectionedit19"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_k  </td><td class="col1 centeralign">  float  </td><td class="col2"> k-constant for linearization of channel 0 A/D value </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_k  </td><td class="col1 centeralign">  float  </td><td class="col2"> k-constant for linearization of channel 1 A/D value </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_k  </td><td class="col1 centeralign">  float  </td><td class="col2"> k-constant for linearization of channel 2 A/D value </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_k  </td><td class="col1 centeralign">  float  </td><td class="col2"> k-constant for linearization of channel 3 A/D value </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table8&quot;,&quot;secid&quot;:19,&quot;range&quot;:&quot;3935-4272&quot;} -->
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;k constants for linearization&quot;,&quot;hid&quot;:&quot;k_constants_for_linearization&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:18,&quot;range&quot;:&quot;3707-4273&quot;} -->
+<h2 class="sectionedit20" id="m_constants_for_linearization">m constants for linearization</h2>
+<div class="level2">
+
+<p>
+Linearization is available so a measurement y can be calculated from 
+</p>
+<pre class="code">y = k*x + m</pre>
+
+<p>
+where x is either the current counter value for a channel or the current frequency for a channel.
+</p>
+<div class="table sectionedit21"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  Name  </th><th class="col1 centeralign">  Type  </th><th class="col2"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 centeralign">  ch0_m  </td><td class="col1 centeralign">  float  </td><td class="col2"> m-constant for linearization of channel 0 A/D value. </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  ch1_m  </td><td class="col1 centeralign">  float  </td><td class="col2"> m-constant for linearization of channel 1 A/D value </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  ch2_m  </td><td class="col1 centeralign">  float  </td><td class="col2"> m-constant for linearization of channel 2 A/D value </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  ch3_m  </td><td class="col1 centeralign">  float  </td><td class="col2"> m-constant for linearization of channel 3 A/D value </td>
+	</tr>
+</table></div>
+<!-- EDIT{&quot;target&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&quot;,&quot;hid&quot;:&quot;table9&quot;,&quot;secid&quot;:21,&quot;range&quot;:&quot;4502-4840&quot;} -->
+<p>
+<br/>
+
+</p>
+<hr />
+
+<p>
+<a href="/vilnius/manual/lib/exe/detail.php?id=abstractions&amp;media=grodan_logo.png" class="media" title="grodan_logo.png"><img src="/vilnius/manual/lib/exe/fetch.php?w=100&amp;tok=9032da&amp;media=grodan_logo.png" class="mediacenter" alt="" width="100" /></a>
+<br/>
+
+<center>
+<strong>Paradise of the Frog AB</strong> Brattbergavägen 17 820 50 LOS SWEDEN<br/>
+
+<strong>email:</strong> <a href="mailto:&#x69;&#x6e;&#x66;&#x6f;&#x40;&#x67;&#x72;&#x6f;&#x64;&#x61;&#x6e;&#x73;&#x70;&#x61;&#x72;&#x61;&#x64;&#x69;&#x73;&#x2e;&#x63;&#x6f;&#x6d;" class="mail" title="&#x69;&#x6e;&#x66;&#x6f;&#x40;&#x67;&#x72;&#x6f;&#x64;&#x61;&#x6e;&#x73;&#x70;&#x61;&#x72;&#x61;&#x64;&#x69;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&#x40;&#x67;&#x72;&#x6f;&#x64;&#x61;&#x6e;&#x73;&#x70;&#x61;&#x72;&#x61;&#x64;&#x69;&#x73;&#x2e;&#x63;&#x6f;&#x6d;</a> <strong>phone:</strong> +46 (0)8 40011835 <br/>
+
+<strong>web:</strong><a href="http://www.grodansparadis.com" class="urlextern" title="http://www.grodansparadis.com" rel="nofollow">http://www.grodansparadis.com</a> <br/>
+
+</center>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;m constants for linearization&quot;,&quot;hid&quot;:&quot;m_constants_for_linearization&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:20,&quot;range&quot;:&quot;4274-&quot;} -->

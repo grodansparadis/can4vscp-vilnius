@@ -1,0 +1,110 @@
+====== Abstractions ======
+
+A VSCP unit is  describing it's configuration to the world with a register model where each register is eight bit in width. This is often inconvenient for a human user who is used to higher level types and this is what //abstractions// are there for. They sit above registers and specify types as strings, floats, integers and other such higher level types.
+
+===== A/D value =====
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_value  |  uint16_t  | A/D value for channel 0 |
+|  ch1_value  |  uint16_t  | A/D value for channel 1 |
+|  ch2_value  |  uint16_t  | A/D value for channel 2 |
+|  ch3_value  |  uint16_t  | A/D value for channel 3 |
+
+===== Measurement value =====
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_measurement_value  |  float  | Measurement value for channel 0 |
+|  ch1_measurement_value  |  float  | Measurement value for channel 1 |
+|  ch2_measurement_value  |  float  | Measurement value for channel 2 |
+|  ch3_measurement_value  |  float  | Measurement value for channel 3 |
+===== A/D report interval =====
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_report_interval  |  uint16_t  | Report interval in milliseconds for channel 0. Set to zero to disable. |
+|  ch1_report_interval  |  uint16_t  | Report interval in milliseconds for channel 1. Set to zero to disable. |
+|  ch2_report_interval  |  uint16_t  | Report interval in milliseconds for channel 2. Set to zero to disable. |
+|  ch3_report_interval  |  uint16_t  | Report interval in milliseconds for channel 3. Set to zero to disable. |
+
+===== A/D low alarm =====
+
+Low alarms will use index 0,1,2,3 to identify the origin of the alarm. See [[events|Events]] for more information.
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_low_alarm  |  uint16_t  | Low alarm set point for channel 0. |
+|  ch1_low_alarm  |  uint16_t  | Low alarm set point for channel 1. |
+|  ch2_low_alarm  |  uint16_t  | Low alarm set point for channel 2. |
+|  ch3_low_alarm  |  uint16_t  | Low alarm set point for channel 3. |
+
+===== A/D high alarm =====
+
+High alarms will use index 0x80,0x81,0x82,0x83 (bit 7 set of the index byte) to identify the origin of the alarm. See [[events|Events]] for more information.
+
+^  Name  ^  Type  ^ Description ^
+|  ch1_high_alarm  |  uint16_t  | High alarm set point for channel 0. |
+|  ch2_high_alarm  |  uint16_t  | High alarm set point for channel 1. |
+|  ch3_high_alarm  |  uint16_t  | High alarm set point for channel 2. |
+|  ch4_high_alarm  |  uint16_t  | High alarm set point for channel 3. |
+
+===== Measurement report interval =====
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_measurement_report_interval  |  uint16_t  | Measurement report interval for channel 0. Set to zero to disable. |
+|  ch1_measurement_report_interval  |  uint16_t  | Measurement report interval for channel 1. Set to zero to disable. |
+|  ch2_measurement_report_interval  |  uint16_t  | Measurement report interval for channel 2. Set to zero to disable. |
+|  ch3_measurement_report_interval  |  uint16_t  | Measurement report interval for channel 3. Set to zero to disable. |
+
+===== A/D absolute low value =====
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_low  |  uint16_t  | Absolute low value for channel 0 |
+|  ch1_low  |  uint16_t  | Absolute low value for channel 1 |
+|  ch2_low  |  uint16_t  | Absolute low value for channel 2 |
+|  ch3_low  |  uint16_t  | Absolute low value for channel 3 |
+
+
+===== A/D absolute high value =====
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_high  |  uint16_t  | Absolute high value for channel 0 |
+|  ch1_high  |  uint16_t  | Absolute high value for channel 1 |
+|  ch2_high  |  uint16_t  | Absolute high value for channel 2 |
+|  ch3_high  |  uint16_t  | Absolute high value for channel 3 |
+
+===== k constants for linearization =====
+
+Linearization is available so a measurement y can be calculated from 
+
+  y = k*x + m
+
+where x is either the current counter value for a channel or the current frequency for a channel.
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_k  |  float  | k-constant for linearization of channel 0 A/D value |
+|  ch1_k  |  float  | k-constant for linearization of channel 1 A/D value |
+|  ch2_k  |  float  | k-constant for linearization of channel 2 A/D value |
+|  ch3_k  |  float  | k-constant for linearization of channel 3 A/D value |
+
+===== m constants for linearization =====
+
+Linearization is available so a measurement y can be calculated from 
+
+  y = k*x + m
+
+where x is either the current counter value for a channel or the current frequency for a channel.
+
+^  Name  ^  Type  ^ Description ^
+|  ch0_m  |  float  | m-constant for linearization of channel 0 A/D value. |
+|  ch1_m  |  float  | m-constant for linearization of channel 1 A/D value |
+|  ch2_m  |  float  | m-constant for linearization of channel 2 A/D value |
+|  ch3_m  |  float  | m-constant for linearization of channel 3 A/D value |
+
+
+\\ 
+---- 
+{{ :grodan_logo.png?100 |}}
+\\ 
+<html><center></html>
+**Paradise of the Frog AB** Brattbergavägen 17 820 50 LOS SWEDEN\\  
+**email:** [[info@grodansparadis.com]] **phone:** +46 (0)8 40011835 \\ 
+**web:**[[http://www.grodansparadis.com]] \\ 
+<html></center></html>

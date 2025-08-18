@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "vilnius_rev_c")(type "KiCad")(uri "$(KIPRJMOD)/vilnius_rev_c.pretty")(options "")(descr ""))
+)

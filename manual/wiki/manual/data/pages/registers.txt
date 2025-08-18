@@ -1,0 +1,285 @@
+====== Registers ======
+
+===== Page 0 =====
+
+===== Zone/subzone info =====
+
+^ Register ^ Page ^ Description ^
+|  0  |  0  | The zone this module belongs to |
+|  1  |  0  | The sub zone this module belongs to |
+|  2  |  0  | Zone for channel 0 |
+|  3  |  0  | Sub zone for channel 0 |
+|  4  |  0  | Zone for channel 1 |
+|  5  |  0  | Sub zone for channel 1 |
+|  6  |  0  | Zone for channel 2 |
+|  7  |  0  | Sub zone for channel 2 |
+|  8  |  0  | Zone for channel 3 |
+|  9  |  0  | Sub zone for channel 3 |
+|  10  |  0  | Zone for I/O channel 0 |
+|  11  |  0  | Sub zone I/O channel 0 |
+|  12  |  0  | Zone for I/O channel 1 |
+|  13  |  0  | Sub zone I/O channel 1 |
+
+===== Module control register =====
+
+^ Register ^ Page ^ Description ^
+|  14  |  0  | Reserved |
+
+
+===== A/D control registers =====
+
+^ Register ^ Page ^ Description ^
+|  15  |  0  | Control register for A/D channel 0 |
+|  16  |  0  | Control register for A/D channel 1 |
+|  17  |  0  | Control register for A/D channel 2 |
+|  18  |  0  | Control register for A/D channel 3 |
+
+==== Descriptions of control register bits ====
+
+^  Bit  ^ Description ^
+|  0  | Reserved.|
+|  1  | Enable low alarm. |
+|  2  | Enable high alarm. |
+|  3  | The A input is used so the real voltage is double to what is read on the A/D input. Readings will therefore be multiplied by two before they are used in reporting and calculations. |
+|  4  | Reserved. |
+|  5  | Reserved. |
+|  6  | Reserved. |
+|  7  | Reserved.|
+
+===== A/D value registers =====
+
+^ Register ^ Page ^ Description ^
+|  19  |  0  | A/D channel 0 reading (MSB) |
+|  20  |  0  | A/D channel 0 reading (LSB) |
+|  21  |  0  | A/D channel 1 reading (MSB) |
+|  22  |  0  | A/D channel 1 reading (LSB) |
+|  23  |  0  | A/D channel 2 reading (MSB) |
+|  24  |  0  | A/D channel 2 reading (LSB) |
+|  25  |  0  | A/D channel 3 reading (MSB) |
+|  26  |  0  | A/D channel 3 reading (LSB) |
+
+===== A/D report interval registers =====
+
+Report time in milliseconds for A/D sample reports.
+
+The minimum pulse time is 1 milliseconds and the max time is 65535 milliseconds which is about one minute. Set to zero (default) to turn off reporting. Periodic events will be sent with the period set here. Be careful to not set a to low value as this will flow the bus.
+
+^ Register ^ Page ^ Description ^
+|  27  |  0  | A/D channel 0 16-bit report interval in milliseconds (MSB) |
+|  28  |  0  | A/D channel 0 16-bit report interval in milliseconds (LSB) |
+|  29  |  0  | A/D channel 1 16-bit report interval in milliseconds (MSB) |
+|  30  |  0  | A/D channel 1 16-bit report interval in milliseconds (LSB) |
+|  31  |  0  | A/D channel 2 16-bit report interval in milliseconds (MSB) |
+|  32  |  0  | A/D channel 2 16-bit report interval in milliseconds (LSB) |
+|  33  |  0  | A/D channel 3 16-bit report interval in milliseconds (MSB) |
+|  34  |  0  | A/D channel 3 16-bit report interval in milliseconds (LSB) |
+
+===== A/D low alarm set point registers =====
+
+^ Register ^ Page ^ Description ^
+|  35  |  0  | A/D channel 0 low alarm set point (MSB) |
+|  36  |  0  | A/D channel 0 low alarm set point (LSB) |
+|  37  |  0  | A/D channel 1 low alarm set point (MSB) |
+|  38  |  0  | A/D channel 1 low alarm set point (LSB) |
+|  39  |  0  | A/D channel 2 low alarm set point (MSB) |
+|  40  |  0  | A/D channel 2 low alarm set point (LSB) |
+|  41  |  0  | A/D channel 3 low alarm set point (MSB) |
+|  42  |  0  | A/D channel 3 low alarm set point (LSB) |
+
+===== A/D high alarm set point registers =====
+
+^ Register ^ Page ^ Description ^
+|  43  |  0  | A/D channel 0 low alarm set point (MSB) |
+|  44  |  0  | A/D channel 0 low alarm set point (LSB) |
+|  45  |  0  | A/D channel 1 low alarm set point (MSB) |
+|  46  |  0  | A/D channel 1 low alarm set point (LSB) |
+|  47  |  0  | A/D channel 2 low alarm set point (MSB) |
+|  48  |  0  | A/D channel 2 low alarm set point (LSB) |
+|  49  |  0  | A/D channel 3 low alarm set point (MSB) |
+|  50  |  0  | A/D channel 3 low alarm set point (LSB) |
+
+===== A/D alarm hysteresis registers =====
+
+^ Register ^ Page ^ Description ^
+|  51  |  0  | A/D channel 0 low hysteresis |
+|  52  |  0  | A/D channel 0 low hysteresis |
+|  53  |  0  | A/D channel 1 low hysteresis |
+|  54  |  0  | A/D channel 1 low hysteresis |
+
+This is an unsigned value that the A/D value for a channel must go over + the set point to release the alarm condition. The same is true for the high alarm point and this alarm is released when the A/D reading go below the set point minus the hysteresis set here.
+
+===== Measurement report interval =====
+
+Set report interval in milliseconds for measurement reports. Setting the interval to zero turn of reporting.
+
+^ Register ^ Page ^ Description ^
+|  55  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 0 (MSB). |
+|  56  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 0 (LSB). |
+|  57  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 1 (MSB). |
+|  58  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 1 (LSB). |
+|  59  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 2 (MSB). |
+|  60  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 2 (LSB). |
+|  61  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 3 (MSB). |
+|  62  |  0  | 16-bit report interval in milliseconds for measurements A/D channel 3 (LSB). |
+
+===== A/D absolute low value registers =====
+
+^ Register ^ Page ^ Description ^
+|  63  |  0  | A/D channel 0 absolute low value (MSB) |
+|  64  |  0  | A/D channel 0 absolute low value (LSB) |
+|  65  |  0  | A/D channel 1 absolute low value (MSB) |
+|  66  |  0  | A/D channel 1 absolute low value (LSB) |
+|  67  |  0  | A/D channel 2 absolute low value (MSB) |
+|  68  |  0  | A/D channel 2 absolute low value (LSB) |
+|  69  |  0  | A/D channel 3 absolute low value (MSB) |
+|  70  |  0  | A/D channel 3 absolute low value (LSB) |
+
+===== A/D absolute high value registers =====
+
+^ Register ^ Page ^ Description ^
+|  71  |  0  | A/D channel 0 absolute high value (MSB) |
+|  72  |  0  | A/D channel 0 absolute high value (LSB) |
+|  73  |  0  | A/D channel 1 absolute high value (MSB) |
+|  74  |  0  | A/D channel 1 absolute high value (LSB) |
+|  75  |  0  | A/D channel 2 absolute high value (MSB) |
+|  76  |  0  | A/D channel 2 absolute high value (LSB) |
+|  77  |  0  | A/D channel 3 absolute high value (MSB) |
+|  78  |  0  | A/D channel 3 absolute high value (LSB) |
+
+===== I/O channel control register =====
+
+Control the behavior of the two I/O channels in this register.
+
+^ Register ^ Page ^ Description ^
+|  79  |  0  | I/O control register |
+
+==== Bits ====
+
+^ Bit ^ Description ^
+|  0  | Direction for I/O channel 0 (RC4). 0=output. 1=input. |
+|  1  | Direction for I/O channel 1 (RC5). 0=output. 1=input. |
+|  2  | Reserved. |
+|  3  | Reserved. |
+|  4  | Send [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.information#type_3_0x03_on|CLASS1.INFOMATION, ON]]/[[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.information#type_4_0x04_off|CLASS1.INFOMATION, OFF]] event on input change if I/O 0 is set as input. |
+|  5  | Send [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.information#type_3_0x03_on|CLASS1.INFOMATION, ON]]/[[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.information#type_4_0x04_off|CLASS1.INFOMATION, OFF]] event on input change if I/O 1 is set as input. |
+|  6  | Use [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.control#type_5_0x05_turnon|CLASS1.CONTROL, TURNON]]/[[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.control#type_6_0x06_turnoff|CLASS1.CONTROL, TURNOFF]] instead of ON/OFF for I/O 0. |
+|  7  | Use [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.control#type_5_0x05_turnon|CLASS1.CONTROL, TURNON]]/[[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.control#type_6_0x06_turnoff|CLASS1.CONTROL, TURNOFF]] instead of ON/OFF for I/O 1. |
+===== I/O channel status register =====
+
+Read or set state for the two I/O channels in this register.
+
+^ Register ^ Page ^ Description ^
+|  80  |  0  | I/O status register |
+
+
+^ Bit ^ Description ^
+|  0  | Read or write the state of I/O channel 0 in this register. \\ **0** - is returned for an inactive input or a low output. A written zero will set an output channel low. \\ **1** - is returned for an active input or a high output. A written one will set an output channel high. |
+|  1  | Read or write the state of I/O channel 1 in this register. \\ **0** - is returned for an inactive input or a low output. A written zero will set an output channel low. \\ **1** - is returned for an active input or a high output. A written one will set an output channel high. |
+|  2  | Reserved. |
+|  3  | Reserved. |
+|  4  | Enable event on change for I/O channel 0. |
+|  5  | Enable event on change for I/O channel 1. |
+|  6  | Select if ON/OFF (set to zero) or TURNON/TURNOFF (set to one) events should be sent as change events on channel 0. |
+|  7  | Select if ON/OFF (set to zero) or TURNON/TURNOFF (set to one) events should be sent as change events on channel 1. |
+===== Page 1 =====
+
+The scaling is used with linearization formula
+
+  value = k * A/D-value + m
+
+where value is calculated as a 32-bit floating point value and where both k and m is 32-bit floating point constants.
+
+Currently the only class of events that can be sent is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement|CLASS1.MEASUREMENT]] and with data type float.This means the class will always be set to 10. This may however change in the future.
+
+
+
+
+==== Linearization information  ====
+
+^ Register ^ Page ^ Description ^
+|  0  |  1  | VSCP event information for linearization channel 0\\ \\ **bit 0** - Reserved.\\ **bit 1** - Reserved.\\ **bit 2** - Reserved.\\ **bit 3** - Unit.\\ **bit 4** - Unit.\\ **bit 5** - Reserved.\\ **bit 6** - Class bit 8.\\ **bit 7** - Reserved.\\  |
+|  1  |  1  | VSCP event information for linearization channel 0, VSCP Class low eight bits (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement|10, CLASS1:MEASURMENET]]). |
+|  2  |  1  | VSCP event information for linearization channel 0, VSCP Type (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement#type_16_0x10_electrical_potential_voltage|16, Electrical Potential (Voltage))]]. |
+|  3  |  1  | VSCP event information for linearization channel 1\\ \\ **bit 0** - Reserved.\\ **bit 1** - Reserved.\\ **bit 2** - Reserved.\\ **bit 3** - Unit.\\ **bit 4** - Unit.\\ **bit 5** - Reserved.\\ **bit 6** - Class bit 8.\\ **bit 7** - Reserved.\\  |
+|  4  |  1  | VSCP event information for linearization channel 1, VSCP Class low eight bits (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement|10, CLASS1:MEASURMENET]]). |
+|  5  |  1  | VSCP event information for linearization channel 1, VSCP Type (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement#type_16_0x10_electrical_potential_voltage|16, Electrical Potential (Voltage))]]. |
+|  6  |  1  | VSCP event information for linearization channel 2\\ \\ **bit 0** - Reserved.\\ **bit 1** - Reserved.\\ **bit 2** - Reserved.\\ **bit 3** - Unit.\\ **bit 4** - Unit.\\ **bit 5** - Reserved.\\ **bit 6** - Class bit 8.\\ **bit 7** - Reserved.\\  |
+|  7  |  1  | VSCP event information for linearization channel 2, VSCP Class low eight bits (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement|10, CLASS1:MEASURMENET]]). |
+|  8  |  1  | VSCP event information for linearization channel 2, VSCP Type (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement#type_16_0x10_electrical_potential_voltage|16, Electrical Potential (Voltage))]]. |
+|  9  |  1  | VSCP event information for linearization channel 3\\ \\ **bit 0** - Reserved.\\ **bit 1** - Reserved.\\ **bit 2** - Reserved.\\ **bit 3** - Unit.\\ **bit 4** - Unit.\\ **bit 5** - Reserved.\\ **bit 6** - Class bit 8.\\ **bit 7** - Reserved.\\  |
+|  10  |  1  | VSCP event information for linearization channel 3, VSCP Class low eight bits (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement|10, CLASS1:MEASURMENET]]). |
+|  11  |  1  | VSCP event information for linearization channel 3, VSCP Type (Default is [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement#type_16_0x10_electrical_potential_voltage|16, Electrical Potential (Voltage))]]. |
+
+==== Linearization constants  ====
+
+^ Register ^ Page ^ Description ^
+|  12  |  1  | 32-bit floating point linearization k-constant for channel 0 (MSB) |
+|  13  |  1  | 32-bit floating point linearization k-constant for channel 0 |
+|  14  |  1  | 32-bit floating point linearization k-constant for channel 0 |
+|  15  |  1  | 32-bit floating point linearization k-constant for channel 0 (LSB) |
+|  16  |  1  | 32-bit floating point linearization k-constant for channel 1 (MSB) |
+|  17  |  1  | 32-bit floating point linearization k-constant for channel 1 |
+|  18  |  1  | 32-bit floating point linearization k-constant for channel 1 |
+|  19  |  1  | 32-bit floating point linearization k-constant for channel 1 (LSB) |
+|  20  |  1  | 32-bit floating point linearization k-constant for channel 2 (MSB) |
+|  21  |  1  | 32-bit floating point linearization k-constant for channel 2 |
+|  22  |  1  | 32-bit floating point linearization k-constant for channel 2 |
+|  23  |  1  | 32-bit floating point linearization k-constant for channel 2 (LSB) |
+|  24  |  1  | 32-bit floating point linearization k-constant for channel 3 (MSB) |
+|  25  |  1  | 32-bit floating point linearization k-constant for channel 3 |
+|  26  |  1  | 32-bit floating point linearization k-constant for channel 3 |
+|  27  |  1  | 32-bit floating point linearization k-constant for channel 3 (LSB) |
+|  28  |  1  | 32-bit floating point linearization m-constant for channel 0 (MSB) |
+|  29  |  1  | 32-bit floating point linearization m-constant for channel 0 |
+|  30  |  1  | 32-bit floating point linearization m-constant for channel 0 |
+|  31  |  1  | 32-bit floating point linearization m-constant for channel 0 (LSB) |
+|  32  |  1  | 32-bit floating point linearization m-constant for channel 1 (MSB) |
+|  33  |  1  | 32-bit floating point linearization m-constant for channel 1 |
+|  34  |  1  | 32-bit floating point linearization m-constant for channel 1 |
+|  35  |  1  | 32-bit floating point linearization m-constant for channel 1 (LSB) |
+|  36  |  1  | 32-bit floating point linearization m-constant for channel 2 (MSB) |
+|  37  |  1  | 32-bit floating point linearization m-constant for channel 2 |
+|  38  |  1  | 32-bit floating point linearization m-constant for channel 2 |
+|  39  |  1  | 32-bit floating point linearization m-constant for channel 2 (LSB) |
+|  40  |  1  | 32-bit floating point linearization m-constant for channel 3 (MSB) |
+|  41  |  1  | 32-bit floating point linearization m-constant for channel 3 |
+|  42  |  1  | 32-bit floating point linearization m-constant for channel 3 |
+|  43  |  1  | 32-bit floating point linearization m-constant for channel 3 (LSB) |
+
+
+==== Measurement values  ====
+
+^ Register ^ Page ^ Description ^
+|  44  |  1  | 32-bit floating point measurement value for channel 0 (MSB) |
+|  45  |  1  | 32-bit floating point measurement value for channel 0 |
+|  46  |  1  | 32-bit floating point measurement value for channel 0 |
+|  47  |  1  | 32-bit floating point measurement value for channel 0 (LSB) |
+|  48  |  1  | 32-bit floating point measurement value for channel 1 (MSB) |
+|  49  |  1  | 32-bit floating point measurement value for channel 1 |
+|  50  |  1  | 32-bit floating point measurement value for channel 1 |
+|  51  |  1  | 32-bit floating point measurement value for channel 1 (LSB) |
+|  52  |  1  | 32-bit floating point measurement value for channel 2 (MSB) |
+|  53  |  1  | 32-bit floating point measurement value for channel 2 |
+|  54  |  1  | 32-bit floating point measurement value for channel 2 |
+|  55  |  1  | 32-bit floating point measurement value for channel 2 (LSB) |
+|  56  |  1  | 32-bit floating point measurement value for channel 3 (MSB) |
+|  57  |  1  | 32-bit floating point measurement value for channel 3 |
+|  58  |  1  | 32-bit floating point measurement value for channel 3 |
+|  59  |  1  | 32-bit floating point measurement value for channel 3 (LSB) |
+
+===== Page 2 =====
+
+^ Register ^ Page ^ Description ^
+|  0-31  |  2  | Decision matrix |
+
+
+\\ 
+---- 
+{{ :grodan_logo.png?100 |}}
+<html>
+<center>
+<b>Paradise of the Frog AB</b> Brattbergavägen 17, 820 50 LOS, SWEDEN<br />
+<b>email:</b> <a href="info@grodansparadis.com">info@paradiseofthefrog.com</a> <b>phone:</b> +46 (0)8 40011835<br />
+<b>web:</b> <a href="http://www.grodansparadis.com">http://www.paradiseofthefrog.com</a><br>
+</center>
+</html>

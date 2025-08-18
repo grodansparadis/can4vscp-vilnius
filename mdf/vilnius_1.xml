@@ -4,8 +4,8 @@
 <module>
     <name>Vilnius A/D module</name>
     <model>B</model>
-    <version>9</version>
-    <changed>2024-04-19</changed>
+    <version>10</version>
+    <changed>2024-04-25</changed>
     <description lang="en">
         With this VSCP module which can measure voltage 
         on four channels and to read/write two digital I/O
@@ -53,7 +53,7 @@
     <!-- Firmware for the device -->
     <files>
     
-    <firmware target="pic18f2558"
+    <firmware target="pic18f2580"
     	path="https://github.com/grodansparadis/can4vscp_vilnius/releases/download/v1.04/Vilnius_pic18f2580_1_0_4_relocated.hex" 
         format="intelhex8"
         date="2020-05-15"
@@ -77,7 +77,7 @@
         </description> 
     </firmware>
     
-    <firmware target="pic18f2558"
+    <firmware target="pic18f2580"
     	path="https://github.com/grodansparadis/can4vscp_vilnius/releases/download/v1.0.0/Vilnius_1.0.0.hex" 
         format="intelhex8"
         date="2015-07-07"
@@ -89,7 +89,7 @@
         </description> 
     </firmware>
     
-    <firmware target="pic18f2558"
+    <firmware target="pic18f2580"
     	path="https://github.com/grodansparadis/can4vscp_vilnius/releases/download/v1.0.0/Vilnius_1.0.0.hex" 
         format="intelhex8"
         date="2015-07-07"

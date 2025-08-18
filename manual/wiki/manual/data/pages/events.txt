@@ -1,0 +1,26 @@
+====== Events ======
+
+Here the events sent by the module is described.
+
+
+^ Event ^ Description ^
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.data#type_2_0x02_a_d_value|CLASS1.DATA (15) Type=2, A/D Value]]  | Input/Output data steam event sent on regular intervals if activated.\\ \\ **Byte 0:** //0b01100000// + sensoridx (0x60-0x63) for integer.\\ **Byte 1:** 0\\ **Byte 2:** 0\\ **Byte 3:** MSB of A/D value\\ **Byte 4:** LSB of A/D value.   |
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.measurement|CLASS1.MEASUREMENT (10) Type=x, Configurable]]  | Input/Output data steam event sent on regular intervals if activated.\\ \\ **Byte 0:** //0b011uuiii// where __0101__ is floating point, __uu__ is configured unit for the selected VSCP type, __iii__ is channel 0-3.\\ **Byte 1-4:** 32-bit floating point value in bigendian format. |
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.alarm&#type_2_0x02_alarm_occurred|CLASS1.ALARM (1) Type=1, Alarm occurred]]  | If an alarm is armed this event is sent when it occurs and the corresponding alarm bit is set in the alarm register.\\ \\ **Byte 0** - Channel 0x00-0x03 for low alarm or with bit 7 set to indicate high alarm (0x80-0x83) \\ **Byte 1** - Zone for module.\\ **Byte 2** - Sub zone for channel or sub zone for module if channel sub zone is zero.\\  |
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.information#type_3_0x03_on|CLASS1.INFORMATION (20) Type=3, On]]  | An I/O channel has been set to its ON position. For an output this means that it has been set high. For a channel set as an input it means the channel input turned high. The channel is checked every second for a change.|
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.information#type_4_0x04_off|CLASS1.INFORMATION (20) Type=4, Off]]  | An I/O channel has been set to its OFF position. For an output this means that it has been set low. For a channel set as an input it means the channel input turned low. The channel is checked every second for a change. |
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.control#type_5_0x05_turnon|CLASS1.CONTROL (30) Type=5, TurnOn]]  | An I/O channel has been set to its ON position. The channel is checked every second for a change. This is only valid for a channel configured as input. |
+|  [[http://www.vscp.org/docs/vscpspec/doku.php?id=class1.control#type_6_0x06_turnoff|CLASS1.CONTROL (30) Type=6, TurnOff]]  | An I/O channel has been set to its OFF position. The channel is checked every second for a change. This is only valid for a channel configured as input. |
+
+
+
+\\ 
+---- 
+{{ :grodan_logo.png?100 |}}
+<html>
+<center>
+<b>Paradise of the Frog AB</b> Brattbergavägen 17, 820 50 LOS, SWEDEN<br />
+<b>email:</b> <a href="info@grodansparadis.com">info@paradiseofthefrog.com</a> <b>phone:</b> +46 (0)8 40011835<br />
+<b>web:</b> <a href="http://www.grodansparadis.com">http://www.paradiseofthefrog.com</a><br>
+</center>
+</html>

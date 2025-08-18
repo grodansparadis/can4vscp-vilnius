@@ -1,0 +1,28 @@
+
+
+====== Introduction ====== 
+
+{{ :vilnius13.png?600 | Vilnius }}
+
+
+Vilnius is a module that have four A/D channels that each can individually be set to report A/D values or send alarms when set upper/lower limits are passed. The A/D converters is 10-bit in width and can measure analog values in the range 0-5V 
+
+On the module is a linear curve fitting functionality that can take the A/D values form one of the channels and report the calculated result as a VSCP measurement in floating point form. As all SI units is available all types of measurements can be reported. 
+
+The module comes with a GUID and is programmed with a bootloader and VSCP module functionality that works right out of the box.
+
+The module also have two digital channels that individually can be set as inputs or outputs.
+
+
+\\ 
+---- 
+{{ :grodan_logo.png?100 |}}
+<html>
+<center>
+<b>Paradise of the Frog AB</b> Brattbergavägen 17, 820 50 LOS, SWEDEN<br />
+<b>email:</b> <a href="info@grodansparadis.com">info@paradiseofthefrog.com</a> <b>phone:</b> +46 (0)8 40011835<br />
+<b>web:</b> <a href="http://www.grodansparadis.com">http://www.paradiseofthefrog.com</a><br>
+</center>
+</html>
+
+
