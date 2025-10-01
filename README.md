@@ -2,7 +2,7 @@
 
 This module is part of the [VSCP project](https://www.vscp.org).  It is free to use, modify and sell. The only thing we kindly ask is that improvements and extensions are contributed back to the project (at your will). This to make the project better for everyone. All design files is licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
-<img src="http://www.grodansparadis.com/vilnius/docs/images/vilnius2_small.png" width="600">
+<img src="./docs/images/vilnius2_small.png" width="600">
 
 ## Abstraction
 
