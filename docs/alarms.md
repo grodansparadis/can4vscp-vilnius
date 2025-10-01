@@ -1,17 +1,16 @@
+Alarm bits are set when alarms occurs. The bits are:
 
-
-| Bit | Description       |
-| --- | ----------------- |
-| 0   | Alarm counter 0   |
-| 1   | Alarm counter 1   |
-| 2   | Alarm counter 2   |
-| 3   | Alarm counter 3   |
-| 4   | Alarm frequency 0 |
-| 5   | Alarm frequency 1 |
-| 6   | Alarm frequency 2 |
-| 7   | Alarm frequency 3 |
+  | Bit |  Description |
+  |----- |-------------|
+  | 0   |  Reserved. |
+  | 1   |  Low alarm has occurred. |
+  | 2   |  High alarm has occurred. |
+  | 3   |  Reserved |
+  | 4   |  Reserved |
+  | 5   |  Reserved |
+  | 6   |  Reserved |
+  | 7   |  Reserved |
 
 Remember that alarm bits are cleared when read.
 
-  
 [filename](./bottom-copyright.md ':include')

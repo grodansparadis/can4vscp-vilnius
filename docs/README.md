@@ -7,7 +7,7 @@
 
 ![Vilnius](./images/vilnius2_small.png)
 
-The Vilnius A/D module is a CAN4VSCP based module with four 10-bit A/D channels for 0-5V or 0-10V and two 5V I/O channels that can be set as inputs or outputs. The module is designed for general use to read analog values and, like all other VSCP modules, can report readings automatically at user-specified intervals.
+The Vilnius A/D module is a CAN4VSCP based module with four 10-bit A/D channels for 0-5V or 0-10V and two 5V I/O channels that can be set as inputs or outputs. The module is designed for general use to read analog values and, like all other VSCP modules, can report readings automatically at user-specified intervals or when certain conditions are met.
 
 The module comes with a GUID and is programmed with a bootloader and VSCP module functionality that works right out of the box.
 
