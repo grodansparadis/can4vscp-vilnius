@@ -36,7 +36,7 @@ All VSCP modules contains information of there own setup, manual, hardware versi
 ### Schematic, PCB, 3D files etc
   * [Schematics reversion B part 1](https://raw.githubusercontent.com/grodansparadis/can4vscp-vilnius/refs/heads/master/eagle/vilnius_sch1_rev_B.png), [part 2](https://raw.githubusercontent.com/grodansparadis/can4vscp-vilnius/refs/heads/master/eagle/vilnius_sch2_rev_B.png)
  * Hardware design files is made in [KiCad](https://kicad.org) and can be found in the `kicad` directory. Valid from reversion B of the hardware.
-   * Gerber files for PCB production can be found in the `gerber` directory (in the `kicad` folder).
+ * Gerber files for PCB production can be found in the `gerber` directory (in the `kicad` folder).
  * Eagle schema and board files for reversion A and B can be found in the `eagle` directory. They are no longer actively updated.
 
  ### Firmware
